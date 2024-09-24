@@ -1,11 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PYR AUTOS</title>
+    <style>
+        :root {
+            --gradient-start: #ff8c00;
+            --gradient-middle: #ff0000;
+            --gradient-end: #800080;
+        }
+        @font-face {
+            font-family: knewave;
+            src: url(font/Knewave-Regular.ttf);
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            color: white;
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(img/Captura\ de\ pantalla\ 2024-09-24\ 080744.png);
+            z-index: -1;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1rem;
+            font-weight: bold;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem;
+            height: calc(100% - 80px);
+        }
+
+        .content {
+            max-width: 50%;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-family: knewave;
+            text-align: center;
+        }
+
+        .slogan {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .logo-large {
+            text-align: right;
+            align-items: center;
+            
+        }
+
+        .logo-large svg {
+            width: 300px;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="background"></div>
+    <header>
+        <div class="logo">
+            <img src="img/7.png" alt="PYR AUTOS">
+            <span>PYR AUTOS</span>
+        </div>
+        <nav>
+            <a href="#inicio">INICIO</a>
+            <a href="#empresa">EMPRESA</a>
+            <a href="#productos">PRODUCTOS</a>
+            <a href="#contactanos">CONTACTANOS</a>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+            <h1>PYR AUTOS COMERCIALIZADORA</h1>
+            <p class="slogan">PYR AUTOS: CON EL ORGULLO NARIÑENSE, TE LLEVAMOS AL VOLANTE DE TUS SUEÑOS!</p>
+        </div>
+        <div class="logo-large">
+            <img src="img/7.png " alt="">
+        </div>
+    </main>
 </body>
 </html>
