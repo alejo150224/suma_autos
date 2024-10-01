@@ -1,14 +1,20 @@
-
+/* Estilos generales */
 body {
     font-family: 'Orbitron', sans-serif;
     margin: 0;
     padding: 0;
     background: linear-gradient(120deg, #fbfbfd, #ffffff, #ffffff);
     color: #fff;
-    overflow: hidden;
     perspective: 1000px;
+    overflow: auto; /* Permite desplazamiento */
+    min-height: 100vh; /* Asegura que el contenido ocupe al menos toda la pantalla */
 }
 
+.container {
+    text-align: center;
+    padding: 50px;
+    z-index: 2;
+}
 
 .animated-background {
     position: fixed;
@@ -27,29 +33,21 @@ body {
     100% { transform: translateY(0px); }
 }
 
-
-.container {
-    text-align: center;
-    padding: 50px;
-    z-index: 2;
-}
-
-
+/* Encabezado */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     padding: 10px;
     background: rgb(0, 0, 0);
     border-radius: 20px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    flex-wrap: wrap; /* Permitir que se ajuste en pantallas pequeñas */
 }
 
-
 .logo {
-    width: 100px;
-    height: 100px;
+    width: 80px; /* Ajuste del tamaño de la imagen en pantallas pequeñas */
+    height: 80px;
     transition: transform 0.5s ease, box-shadow 0.5s ease;
     margin-right: 20px;
 }
@@ -59,11 +57,10 @@ body {
     box-shadow: 0 10px 30px rgba(186, 15, 15, 0.512);
 }
 
-
 .title {
-    font-size: 3em;
+    font-size: 2em; /* Tamaño ajustable para pantallas más pequeñas */
     color: #ffffff;
-    margin: 0;
+    margin: 10px 0;
     flex-grow: 1;
     text-align: center;
     text-shadow: 0 0 15px rgb(252, 252, 252), 0 0 30px rgb(255, 255, 255);
@@ -74,10 +71,12 @@ body {
     transform: scale(1.1) rotateX(10deg);
 }
 
-
+/* Botones de navegación */
 .buttons {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap; /* Ajuste para pantallas más pequeñas */
+    justify-content: center; /* Alinea los botones al centro */
 }
 
 .btn {
@@ -85,8 +84,8 @@ body {
     color: #000000;
     border: none;
     border-radius: 30px;
-    padding: 15px 30px;
-    font-size: 1.2em;
+    padding: 10px 20px; /* Ajuste de padding para pantallas pequeñas */
+    font-size: 1em; /* Tamaño de fuente más pequeño para móviles */
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s ease, box-shadow 0.3s;
     box-shadow: 0 10px 20px rgba(172, 22, 22, 0.971);
@@ -99,9 +98,14 @@ body {
     box-shadow: 0 20px 40px rgba(183, 20, 20, 0.452);
 }
 
+.btn:active {
+    transform: scale(1) translateY(0);
+    box-shadow: 0 4px 6px rgb(255, 255, 255);
+}
 
+/* Títulos de sección */
 .section-title {
-    font-size: 2.5em;
+    font-size: 2em; /* Ajuste de tamaño en pantallas pequeñas */
     color: #000000;
     text-transform: uppercase;
     margin: 40px 0 20px;
@@ -113,13 +117,13 @@ body {
     transform: scale(1.1) rotateY(10deg);
 }
 
-
+/* Párrafos interactivos */
 .interactive-paragraph {
-    font-size: 1.3em;
+    font-size: 1.1em; /* Reducción de tamaño en móviles */
     margin: 10px 0;
     color: #ffffff;
     background: rgba(3, 2, 2, 0.964);
-    padding: 15px;
+    padding: 10px; /* Ajuste de padding para mejor visibilidad */
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(255, 255, 255, 0.43);
     transition: transform 0.3s ease, color 0.3s;
@@ -130,24 +134,75 @@ body {
     color: rgb(186, 25, 25);
 }
 
-
-.security {
-    margin-top: 40px;
+/* Formulario de contacto */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
 }
 
-
-@keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(0); }
+.contact-form label {
+    font-size: 1.1em;
+    color: #000;
 }
 
-.interactive-paragraph {
-    animation: float 4s ease-in-out infinite;
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 10px;
+    border: 2px solid #bd1a1a;
+    width: 100%; /* Asegura que los inputs tomen el ancho completo */
 }
 
+/* Media Queries para diseño responsivo */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Reorganiza los elementos del header */
+        text-align: center;
+    }
 
-.btn:active {
-    transform: scale(1) translateY(0);
-    box-shadow: 0 4px 6px rgb(255, 255, 255);
+    .logo {
+        width: 60px; /* Tamaño más pequeño en pantallas medianas */
+        height: 60px;
+    }
+
+    .title {
+        font-size: 1.8em;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    .section-title {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 50px; /* Ajuste de logo en pantallas pequeñas */
+        height: 50px;
+    }
+
+    .title {
+        font-size: 1.5em; /* Reducción del tamaño del título */
+    }
+
+    .btn {
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+
+    .section-title {
+        font-size: 1.5em; /* Tamaño de título en móviles */
+    }
+
+    .interactive-paragraph {
+        font-size: 1em; /* Fuente más pequeña en pantallas móviles */
+    }
 }
