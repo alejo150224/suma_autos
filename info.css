@@ -1,4 +1,4 @@
-/* Estilos generales con estética futurista */
+
 body {
     font-family: 'Orbitron', sans-serif;
     margin: 0;
@@ -9,7 +9,7 @@ body {
     perspective: 1000px;
 }
 
-/* Fondo animado futurista */
+
 .animated-background {
     position: fixed;
     top: 0;
@@ -27,14 +27,14 @@ body {
     100% { transform: translateY(0px); }
 }
 
-/* Contenedor principal */
+
 .container {
     text-align: center;
     padding: 50px;
     z-index: 2;
 }
 
-/* Header con logo, título y botones en una sola línea */
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -46,7 +46,7 @@ body {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Efectos futuristas en el logo */
+
 .logo {
     width: 100px;
     height: 100px;
@@ -59,7 +59,7 @@ body {
     box-shadow: 0 10px 30px rgba(186, 15, 15, 0.512);
 }
 
-/* Estilo del título con efecto 3D */
+
 .title {
     font-size: 3em;
     color: #ffffff;
@@ -74,7 +74,7 @@ body {
     transform: scale(1.1) rotateX(10deg);
 }
 
-/* Botones futuristas */
+
 .buttons {
     display: flex;
     gap: 10px;
@@ -99,7 +99,7 @@ body {
     box-shadow: 0 20px 40px rgba(183, 20, 20, 0.452);
 }
 
-/* Sección de contenido */
+
 .section-title {
     font-size: 2.5em;
     color: #000000;
@@ -113,7 +113,7 @@ body {
     transform: scale(1.1) rotateY(10deg);
 }
 
-/* Texto interactivo con efectos */
+
 .interactive-paragraph {
     font-size: 1.3em;
     margin: 10px 0;
@@ -130,12 +130,12 @@ body {
     color: rgb(186, 25, 25);
 }
 
-/* Sección de seguridad */
+
 .security {
     margin-top: 40px;
 }
 
-/* Animación 3D */
+
 @keyframes float {
     0% { transform: translateY(0); }
     50% { transform: translateY(-20px); }
@@ -146,7 +146,7 @@ body {
     animation: float 4s ease-in-out infinite;
 }
 
-/* Estilo para cuando el cursor está sobre el botón */
+
 .btn:active {
     transform: scale(1) translateY(0);
     box-shadow: 0 4px 6px rgb(255, 255, 255);
